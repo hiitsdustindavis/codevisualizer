@@ -6,7 +6,7 @@
 
 ## Description
 
-##### This website will allow the user to select options for a pizza and have those options returned to them with the price.
+##### This website will allow the user to select JavaScript elements and have a visual displayed to explain the parts of pieces of a website.
 
 ## Setup/Installation Requirements
 
