@@ -80,49 +80,48 @@ Pizza.prototype.totalPriceCalc = function() {
     return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
 }
 
-// START! QUIZ BUSINESS LOGIC
 
-  // LOOK UNDER THE HOOD & QUIZ
-  $("#myForm").submit(function(event) {
-        var loop = parseInt($('input[name=loop]:checked', '#myForm').val());
-        var question2 = parseInt($('input[name=q2]:checked', '#myForm').val());
-        var question3 = parseInt($('input[name=q3]:checked', '#myForm').val());
-        var question4 = parseInt($('input[name=q4]:checked', '#myForm').val());
-        var question5 = parseInt($('input[name=q5]:checked', '#myForm').val());
-        var total = loop + question2 + question3 + question4 + question5;
+$(document).ready(function() {
+  $("form#pizza-options").submit(function(event) {
+    event.preventDefault();
 
+    var inputtedSize = $("select.form-control.size").val();
+    var inputtedToppings = $("select.form-control.toppings").val();
+    var inputtedToppingsVal = inputtedToppings.length;
+    var toppingString = inputtedToppings.join(", ")
+    var inputtedQuantity = parseInt($("input#quantity").val());
 
-        if (total >= 4) {
-          $("#quizResults").text("Congatulations, you passed! You got " + total + "/5 right.");
-        } else {
-          $("#quizResults").text("You're stupid, you only got " + total + "/5, try again.");
-        }
+    var newPizza = new Pizza(inputtedSize, inputtedToppings, inputtedQuantity);
 
-        if (loop === 0) {
-          $("#question1").css("background-color", "red");
-        } if (question2 === 0) {
-          $("#question2").css("background-color", "red");
-        } if (question3 === 0) {
-          $("#question3").css("background-color", "red");
-        } if (question4 === 0) {
-          $("#question4").css("background-color", "red");
-        } if (question5 === 0) {
-          $("#question5").css("background-color", "red");
-        } else {
-          $("question1").css("background-color", "white");
-        }
+    var inputtedSizeVal = newPizza.sizePriceCalc();
+    var totalPrice = (inputtedSizeVal + inputtedToppingsVal) * inputtedQuantity;
 
-        event.preventDefault();
-        console.log(total);
+    function print(orderdetails) {
+      var outputDiv = document.getElementById('output');
+  		outputDiv.innerHTML = orderdetails;
+    }
+
+    $( "div#output" ).slideDown( "slow", function() {
+      $('html, body').animate({
+        scrollTop: $("#output").offset().top
+      }, 800);
+      $("div#output").html('<div class="result container-fluid">' +
+        '<div class="container">' +
+          '<h3>Thank you for ordering ' +
+          inputtedQuantity +
+          ' <em>"' +
+          toppingString +
+          ' pizza(s)"</em></h3>' +
+          '<h2>Your total is $' +
+          totalPrice +
+          '.00 dollars</h2>' +
+          '<div class="video-container">' +
+            '<iframe width="800px" height="450px" src="https://www.youtube.com/embed/CJEoASUMZbI" frameborder="0" allowfullscreen></iframe>' +
+          '</div>' +
+        '</div>' +
+      '</div>');
     });
-    $("#definition").click(function() {
-      $("#documentReadyPanel").slideToggle("slow");
-    });
-    $("#showQuiz").click(function() {
-      $("#myForm").slideToggle("slow");
-    });
-  // END   LOOK UNDER THE HOOD & QUIZ
-  // END! USER INTERFACE LOGIC
+  });
 
 });
 
