@@ -56,6 +56,7 @@ $(function() {
         $("#answer3").text(answer3);
         $("#answer4").text(answer4);
     });
+});
 
 function Pizza(pizzaSize, toppings, pizzaQuantity) {
   this.pizzaSize = pizzaSize;
