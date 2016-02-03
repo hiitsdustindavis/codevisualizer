@@ -34,7 +34,7 @@ $(function() {
   });
 
    $("#definition").click(function() {
-    $("#documentReadyPanel").slideToggle("slow");
+    $("#myCarousel").slideToggle("slow");
   });
 
 
@@ -54,7 +54,9 @@ $(function() {
         $("#answer3").text(answer3);
         $("#answer4").text(answer4);
     });
+
 });
+
 
 function Pizza(pizzaSize, toppings, pizzaQuantity) {
   this.pizzaSize = pizzaSize;
@@ -121,4 +123,5 @@ $(document).ready(function() {
       '</div>');
     });
   });
+});
 });
