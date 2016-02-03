@@ -363,7 +363,7 @@ $(document).ready(function() {
         console.log(total);
     });
     $("#definition").click(function() {
-      $("#documentReadyPanel").slideToggle("slow");
+      $("#myCarousel").slideToggle("slow");
     });
     $("#showQuiz").click(function() {
       $("#myForm").slideToggle("slow");
