@@ -371,3 +371,12 @@ $(document).ready(function() {
   // END   LOOK UNDER THE HOOD & QUIZ
   // END! USER INTERFACE LOGIC
 });
+
+
+var newQuestion = new Question("Prototypes are which?: ","A model of your website","A property whose value is a function","Objects from which other objects inherit");
+var newQuestion = new Question("Booleans, numbers, and strings are: ","Always objects in JavaScript.","Sometimes objects.","Never objects.");
+var newQuestion = new Question("Loops are used for: ","looping through a block of code a number of times.","looping your JavaScript together with your HTML.","Looping through your specs.");
+var newQuestion = new Question("The code responsible for handling the evaluation and manipulation of data is: ","UI Logic","Business Logic","Inductive Logic");
+var newQuestion = new Question("A function that can be invoked using a new keyword to create new objects is: ","a Constructor.","a Creator.", "a Variable.");
+var newQuestion = new Question("A variable declared outside a function is: ","Local, only usable with one function.", "Global, usable with all functions.", "Literal.");
+var newQuestion = new Question("In JavaScript, a block of code designed to perform a particular task is a: ","Paramter.","Argument.","Variable.","Function.");
