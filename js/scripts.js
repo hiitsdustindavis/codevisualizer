@@ -1,3 +1,30 @@
+var questionArray = [ 
+
+{ prompt: 'How art thou?',
+  answers: [ 'Good', 'Bad'],
+  correctAnswer: 0
+}
+
+]
+
+var   Quiz = {
+  this.questions: questions,
+  this.score: 0;
+}
+
+
+Quiz.prototype.questions = function() {
+  for ( i = 0; i <= questionArray.length; i++) {
+    
+  }
+}
+
+
+
+
+
+
+
 $(function() {
   $("#myForm").submit(function(event) {
       var loop = parseInt($('input[name=loop]:checked', '#myForm').val());
