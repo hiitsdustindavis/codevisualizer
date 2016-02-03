@@ -1,174 +1,238 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
-    <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/scripts.js"></script>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <span id="definition">
-        <button type="button" class="btn btn-success">Button Here</button>
-      </span>
+<head>
+    <title>Slice of Paradise</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome to a Slice of Paradise</h1>
+    </div>
+  </div>
+
+  <div class="form container-fluid">
+  <div class="container">
+    <form id=pizza-options>
       <div class="row">
-        <div id="documentReadyPanel">
-          <div class="col-md-6">
-            <p>Image goes here.</p>
-          </div>
-          <div class="col-md-6">
-            <p>Definition goes here.</p>
+<!-- SELECT SIZE -->
+        <div class="col-sm-4">
+          <h3>1. Pick a Size</h3>
+          <label for="sel1">Any size you like!</label></br>
+          <select class="select form-control size">
+            <option>Medium - $8</option>
+            <option>Large - $12</option>
+          </select>
+<!-- DEFINITION BUTTON -->
+          <span id="definition">
+            <button type="button" class="btn btn-success">Definition Button Here</button>
+          </span>
+        </div>
+<!-- END DEFINITION BUTTON -->
+
+
+<!-- INPUT QUANTITY -->
+        <div class="col-sm-4">
+          <h3>2. Enter the quantity</h3>
+          <label for="sel2">Enter any number you'd like.</label></br>
+          <input type="number" class="form-control" id="quantity">
+        </div>
+
+<!-- SELECT TOPPINGS -->
+        <div class="col-sm-4">
+          <h3>3. Select your Toppings</h3>
+          <label for="sel2">To select multiple items click and drag or hold the control key and click. <em>All Toppings Are $1 Each</em></label></br>
+          <select multiple class="select form-control toppings">
+            <option>Metaphysics</option>
+            <option>FunNoodles</option>
+            <option>Dubstep Beat Drop</option>
+            <option>Microbes</option>
+            <option>Feelings</option>
+          </select>
+        </div>
+
+      </div>
+      <button class=btn id=getPrice>GIMME PIZZA!</button>
+    </form>
+    </div>
+    </div>
+
+  <!-- START Under the Hood and Quiz DIV -->
+      <div class="container-fluid">
+        <div class="container">
+<!-- DEFINITION CONTENTS -->
+        <div class="row">
+          <div id="documentReadyPanel">
+            <div class="col-md-6">
+              <h3>Constructor Function</h3>
+              <img src="img/constructor-blue-print.svg">
+            </div>
+            <div class="col-md-6">
+
+              <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+            </div>
+            <!-- QUIZ BUTTON -->
+                    <span id="showQuiz">
+                      <button type="button" class="btn btn-danger">Take The Quiz!</button>
+                    </span>
+            <!-- END QUIZ BUTTON -->
           </div>
         </div>
+<!-- END DEFINITION CONTENTS-->
+
+        <form id="myForm">
+          <div class="well" id="question1">
+            <div class="radio">
+              <h4>A for loop will execute a block of code how many times?</h4>
+              <label>
+                <input type="radio" name="loop" id="once" value=1 >
+                Once
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="loop" id="twice" value=0 >
+                Twice
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="loop" id="forever" value=0 >
+                Infinitely
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="loop" id="index" value=0 >
+                As many times as the test expression is set to.
+              </label>
+            </div>
+          </div>
+          <div class="well" id="question2">
+            <div class="radio">
+              <h4>A for loop will execute a block of code how many times?</h4>
+              <label>
+                <input type="radio" name="q2" id="once" value=1 >
+                Once
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="twice" value=0 >
+                Twice
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="forever" value=0 >
+                Infinitely
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="index" value=0 >
+                As many times as the test expression is set to.
+              </label>
+            </div>
+          </div>
+          <div class="well" id="question3">
+            <div class="radio">
+              <h4>A for loop will execute a block of code how many times?</h4>
+              <label>
+                <input type="radio" name="q3" id="once" value=1 >
+                Once
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="twice" value=0 >
+                Twice
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="forever" value=0 >
+                Infinitely
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="index" value=0 >
+                As many times as the test expression is set to.
+              </label>
+            </div>
+          </div>
+          <div class="well" id="question4">
+            <div class="radio">
+              <h4>A for loop will execute a block of code how many times?</h4>
+              <label>
+                <input type="radio" name="q4" id="once" value=1 >
+                Once
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q4" id="twice" value=0 >
+                Twice
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q4" id="forever" value=0 >
+                Infinitely
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q4" id="index" value=0 >
+                As many times as the test expression is set to.
+              </label>
+            </div>
+          </div>
+          <div class="well" id="question5">
+            <div class="radio">
+              <h4>A for loop will execute a block of code how many times?</h4>
+              <label>
+                <input type="radio" name="q5" id="once" value=1 >
+                Once
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q5" id="twice" value=0 >
+                Twice
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q5" id="forever" value=0 >
+                Infinitely
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q5" id="index" value=0 >
+                As many times as the test expression is set to.
+              </label>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+          </div>
+          <div id="quizResults">
+          </div>
+        </form>
+      </div>
       </div>
     </div>
-    <span id="showQuiz">
-      <button type="button" class="btn btn-danger">Take The Quiz!</button>
-    </span>
+<!-- END Under the Hood and Quiz DIV -->
 
-    <form id="myForm">
-      <div class="well" id="question1">
-        <div class="radio">
-          <h4>A for loop will execute a block of code how many times?</h4>
-          <label>
-            <input type="radio" name="loop" id="once" value=1 >
-            Once
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="loop" id="twice" value=0 >
-            Twice
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="loop" id="forever" value=0 >
-            Infinitely
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="loop" id="index" value=0 >
-            As many times as the test expression is set to.
-          </label>
-        </div>
+<!-- SUBMIT FORM RESULTS. SEE SCRIPT.JS FOR CONTENTS -->
+      <div id="output">
       </div>
-      <div class="well" id="question2">
-        <div class="radio">
-          <h4>A for loop will execute a block of code how many times?</h4>
-          <label>
-            <input type="radio" name="q2" id="once" value=1 >
-            Once
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q2" id="twice" value=0 >
-            Twice
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q2" id="forever" value=0 >
-            Infinitely
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q2" id="index" value=0 >
-            As many times as the test expression is set to.
-          </label>
-        </div>
-      </div>
-      <div class="well" id="question3">
-        <div class="radio">
-          <h4>A for loop will execute a block of code how many times?</h4>
-          <label>
-            <input type="radio" name="q3" id="once" value=1 >
-            Once
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q3" id="twice" value=0 >
-            Twice
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q3" id="forever" value=0 >
-            Infinitely
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q3" id="index" value=0 >
-            As many times as the test expression is set to.
-          </label>
-        </div>
-      </div>
-      <div class="well" id="question4">
-        <div class="radio">
-          <h4>A for loop will execute a block of code how many times?</h4>
-          <label>
-            <input type="radio" name="q4" id="once" value=1 >
-            Once
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q4" id="twice" value=0 >
-            Twice
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q4" id="forever" value=0 >
-            Infinitely
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q4" id="index" value=0 >
-            As many times as the test expression is set to.
-          </label>
-        </div>
-      </div>
-      <div class="well" id="question5">
-        <div class="radio">
-          <h4>A for loop will execute a block of code how many times?</h4>
-          <label>
-            <input type="radio" name="q5" id="once" value=1 >
-            Once
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q5" id="twice" value=0 >
-            Twice
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q5" id="forever" value=0 >
-            Infinitely
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="q5" id="index" value=0 >
-            As many times as the test expression is set to.
-          </label>
-        </div>
-      </div>
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-      </div>
-      <div id="quizResults">
-      </div>
-    </form>
-  </body>
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
 </html>
