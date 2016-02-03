@@ -1,4 +1,6 @@
- function quizConstructor(question, answer1, answer2, answer3, answer4) {
+
+function quizConstructor(question, answer1, answer2, answer3, answer4) {
+
         this.question = question;
         this.answer1 = answer1;
         this.answer2 = answer2;
@@ -10,22 +12,19 @@
     var quiz = new Array();
 
     // All quiz questions and answers
-    quiz[0] = new quizConstructor("question", "answer1", "answer2", "answer3", "answer4");
-    quiz[1] = new quizConstructor("question1", "answer1", "answer2", "answer3", "answer4");
-    quiz[2] = new quizConstructor("question2", "answer1", "answer2", "answer3", "answer4");
-    quiz[3] = new quizConstructor("question3", "answer1", "answer2", "answer3", "answer4");
-    quiz[4] = new quizConstructor("question4", "answer1", "answer2", "answer3", "answer4");
-    quiz[5] = new quizConstructor("question5", "answer1", "answer2", "answer3", "answer4");
-    quiz[6] = new quizConstructor("question6", "answer1", "answer2", "answer3", "answer4");
-    quiz[7] = new quizConstructor("question7", "answer1", "answer2", "answer3", "answer4");
-    quiz[8] = new quizConstructor("question8", "answer1", "answer2", "answer3", "answer4");
-    quiz[9] = new quizConstructor("question9", "answer1", "answer2", "answer3", "answer4");
+    quiz[0] = new quizConstructor("Prototypes are which?: ","A model of your website","A property whose value is a function","Objects from which other objects inherit");
+    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","Always objects in JavaScript.","Sometimes objects.","Never objects.");
+    quiz[2] = new quizConstructor("Loops are used for: ","looping through a block of code a number of times.","looping your JavaScript together with your HTML.","Looping through your specs.");
+    quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","UI Logic","Business Logic","Inductive Logic");
+    quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","a Constructor.","a Creator.", "a Variable.");
+    quiz[5] = new quizConstructor("A variable declared outside a function is: ","Local, only usable with one function.", "Global, usable with all functions.", "Literal.");
+    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","Parameter.","Argument.","Variable.","Function.");
 
 
 $(function() {
   $("#myForm").submit(function(event) {
       var userAnswer = parseInt($('input[name=answer]:checked', '#myForm').val());
-      
+
       if (userAnswer === 1) {
         $("#quizResults").text("Congatulations, you passed!");
       } else {
@@ -38,8 +37,8 @@ $(function() {
    $("#definition").click(function() {
     $("#documentReadyPanel").slideToggle("slow");
   });
-  
-       
+
+
         // Ask question
       $("#showQuiz").click(function() {
         $("#myForm").show();
@@ -123,6 +122,4 @@ $(document).ready(function() {
       '</div>');
     });
   });
-
 });
-
