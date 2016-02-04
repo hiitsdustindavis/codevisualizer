@@ -53,7 +53,10 @@
           <!-- END DEFINITION BUTTON -->
           <!-- QUIZ BUTTON -->
           <span id="showQuiz">
-          <button type="button" class="btn btn-danger">Take The Quiz!</button>
+          <button type="button" class="btn btn-danger">Launch The Quiz!</button>
+          </span>
+          <span id="nextQuestion">
+          <button type="button" class="btn btn-danger">Next Question</button>
           </span>
           <!-- END QUIZ BUTTON -->
         </div>
@@ -111,10 +114,10 @@
                 <div class="col-md-4">
                 <h3><em>Code Preview</em></h3>
                 <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                  this.pizzaSize = pizzaSize;
+                  this.pizzaToppings = [];
+                  this.pizzaQuantity = pizzaQuantity
+                }</pre>
 
                 </div>
               </div>
@@ -131,10 +134,10 @@
                 <div class="col-md-4">
                 <h3><em>Code Preview</em></h3>
                 <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
                 </div>
               </div>
 
@@ -150,10 +153,10 @@
                 <div class="col-md-4">
                 <h3><em>Code Preview</em></h3>
                 <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
                 </div>
               </div>
 
@@ -169,12 +172,18 @@
                 <div class="col-md-4">
                 <h3><em>Code Preview</em></h3>
                 <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
                 </div>
               </div>
+              <div class = "item">
+                <span id="showQuiz">
+                <button type="button" class="btn btn-danger">Take The Quiz!</button>
+                </span>
+              </div>
+
 
           </div>
 
@@ -198,31 +207,22 @@
       <div class="well">
         <div class="radio">
           <div id="question"></div>
-          <label>
-            <input type="radio" name="answer" id="once" value=1 >
-            <div id="answer1"></div>
+          <label id="answer1">
+
           </label>
         </div>
         <div class="radio">
-          <label>
-            <input type="radio" name="answer" id="twice" value=0 >
-            <div id="answer2"></div>
+          <label id="answer2">
+
           </label>
         </div>
         <div class="radio">
-          <label>
-            <input type="radio" name="answer" id="forever" value=0 >
-            <div id="answer3"></div>
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="answer" id="index" value=0 >
-            <div id="answer4"></div>
+          <label id="answer3">
+
           </label>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit Answer</button>
     </form>
     <div id="quizResults">
     </div>
@@ -238,5 +238,4 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
 </body>
-
 </html>
