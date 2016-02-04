@@ -9,6 +9,7 @@ function quizConstructor(question, answer1, answer2, answer3) {
 
 
     // Create quiz array
+    var total = 0;
     var questionCounter = 0;
     var quiz = new Array();
 
@@ -40,6 +41,13 @@ $(function() {
   });
 
       $("#nextQuestion").click(function() {
+
+        var ri       = Math.floor(Math.random() * quiz.length);
+        var question = quiz[ri].question;
+        var answer1  = quiz[ri].answer1;
+        var answer2  = quiz[ri].answer2;
+        var answer3  = quiz[ri].answer3;
+
         if (questionCounter < 7) {
         //var ri = Math.floor(Math.random() * 7);
         var question = quiz[questionCounter].question;
@@ -62,6 +70,13 @@ $(function() {
         // Ask question
       $("#showQuiz").click(function() {
         $("#myForm").show();
+
+        var ri       = Math.floor(Math.random() * quiz.length);
+        var question = quiz[ri].question;
+        var answer1  = quiz[ri].answer1;
+        var answer2  = quiz[ri].answer2;
+        var answer3  = quiz[ri].answer3;
+
         //var ri = Math.floor(Math.random() * quiz.length);
         var question = quiz[0].question;
         var answer1 = quiz[0].answer1;
@@ -71,11 +86,12 @@ $(function() {
         delete quiz[0];
         questionCounter += 1;
 
+
         $("#question").empty().append(question);
         $("#answer1").empty().append(answer1);
         $("#answer2").empty().append(answer2);
         $("#answer3").empty().append(answer3);
-        $("#quizResults").empty();
+        
     });
 
 });
