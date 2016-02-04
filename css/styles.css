@@ -1,4 +1,4 @@
-.jumbotron {
+.jumbotron.header {
   background-image: url("../img/The_Pizza_Underground2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,7 +11,7 @@
 
 /*BUTTON STYLES*/
 .btn {
-  background-color: #FF3F30;
+  background-color: #f9583c;
   font-weight: bold;
   color: white;
   float: right;
@@ -19,7 +19,7 @@
 }
 .btn:hover,
 .btn:focus {
-  background-color: #FF5E30;
+  background-color: #fa6a51;
   font-weight: bold;
   color: white;
 }
@@ -55,16 +55,22 @@
 }
 
 /*LOOK UNDER THE HOOD & QUIZ*/
-#documentReadyPanel {
+.underthehood.container-fluid {
+  background-color: #FF592E;
+}
+/*#underthehood-image {
   margin-left: 15px;
-  margin: 0px 0px 120px 0px;
-  padding: 30px 0px 300px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 30px 0px 80px 0px;
   display: none;
-  /*height: 100px;*/
+  color: #FFF0D9;
   width: 98%;
-  /*box-shadow: 10px 10px 5px #888888;*/
-  /*border: 1px solid black;
-  border-radius: 5px;*/
+  box-shadow: 10px 10px 5px #888888;
+  border: 1px solid black;
+  border-radius: 5px;
+}*/
+.carousel-control.right, .carousel-control.left {
+  background-image:none;
 }
 
 /*.btn {
@@ -73,14 +79,43 @@
   width: 20%;
 }*/
 
-#showQuiz .btn {
+/*#showQuiz .btn {
   margin-left: 15px;
   width: 19.75%;
+}*/
+
+#myCarousel {
+  display: none;
 }
 
 #myForm {
   display: none;
   margin-left: 15px;
   width: 98%;
+}
+.carousel-inner {
+background-color: red:
+}
+.carousel{
+  background-image: url("../img/red-background.svg");
+  background-repeat: repeat;
+  padding: 1% 0% 0% 0%;
+  color: #FFF0D9;
+  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+  font-family: 'Playfair Display', serif;
+}
+.item img {
+  max-width: 300px;
+}
+pre {
+  background-color: #373737;
+  color: #FFF0D9;
+}
+button.btn.left {
+  font-size: 1.5em;
+  float: left;
+}
+button.btn.right {
+  font-size: 1.5em;
 }
 /*END   LOOK UNDER THE HOOD & QUIZ*/
