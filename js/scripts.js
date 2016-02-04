@@ -1,27 +1,25 @@
-
-function quizConstructor(question, answer1, answer2, answer3) {
-
+function quizConstructor(question, answer1, answer2, answer3, answer4) {
         this.question = question;
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
+        this.answer4 = answer4;
     }
-
 
     // Create quiz array
     var quiz = new Array();
 
     // All quiz questions and answers
-    quiz[0] = new quizConstructor("Prototypes are which?: ","<input type='radio' name='answer' id='once' value=0> A model of your website","<input type='radio' name='answer' id='once' value=1>A property whose value is a function","<input type='radio' name='answer' id='once' value=0>Objects from which other objects inherit");
-    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","<input type='radio' name='answer' id='once' value=0>Always objects in JavaScript.","<input type='radio' name='answer' id='once' value=0>Sometimes objects.","<input type='radio' name='answer' id='once' value=1>Never objects.");
-    quiz[2] = new quizConstructor("Loops are used for: ","<input type='radio' name='answer' id='once' value=1>Looping through a block of code a number of times.","<input type='radio' name='answer' id='once' value=0>Looping your JavaScript together with your HTML.","<input type='radio' name='answer' id='once' value=0>Looping through your specs.");
-    quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","<input type='radio' name='answer' id='once' value=0>UI Logic","<input type='radio' name='answer' id='once' value=1>Business Logic","<input type='radio' name='answer' id='once' value=0>Inductive Logic");
-    quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","<input type='radio' name='answer' id='once' value=1>Constructor.","<input type='radio' name='answer' id='once' value=0>Creator.","<input type='radio' name='answer' id='once' value=0>Variable.");
-    quiz[5] = new quizConstructor("A variable declared outside a function is: ","<input type='radio' name='answer' id='once' value=0>Local, only usable with one function.", "<input type='radio' name='answer' id='once' value=1>Global, usable with all functions.", "<input type='radio' name='answer' id='once' value=0>Literal.");
-    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","<input type='radio' name='answer' id='once' value=0>Parameter.","<input type='radio' name='answer' id='once' value=0>Variable.","<input type='radio' name='answer' id='once' value=1>Function.");
+    quiz[0] = new quizConstructor("Prototypes are which?: ","A model of your website","A property whose value is a function","Objects from which other objects inherit");
+    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","Always objects in JavaScript.","Sometimes objects.","Never objects.");
+    quiz[2] = new quizConstructor("Loops are used for: ","looping through a block of code a number of times.","looping your JavaScript together with your HTML.","Looping through your specs.");
+    quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","UI Logic","Business Logic","Inductive Logic");
+    quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","a Constructor.","a Creator.", "a Variable.");
+    quiz[5] = new quizConstructor("A variable declared outside a function is: ","Local, only usable with one function.", "Global, usable with all functions.", "Literal.");
+    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","Parameter.","Argument.","Variable.","Function.");
 
 
-$(function() {
+ $(function() {
   $("#myForm").submit(function(event) {
       var userAnswer = parseInt($('input[name=answer]:checked', '#myForm').val());
 
@@ -34,23 +32,8 @@ $(function() {
       event.preventDefault();
   });
 
-   $("#definition").click(function() {
-    $("#myCarousel").slideToggle("slow");
-  });
 
-      $("#nextQuestion").click(function() {
-        var ri = Math.floor(Math.random() * quiz.length);
-        var question = quiz[ri].question;
-        var answer1 = quiz[ri].answer1;
-        var answer2 = quiz[ri].answer2;
-        var answer3 = quiz[ri].answer3;
 
-        $("#question").empty().append(question);
-        $("#answer1").empty().append(answer1);
-        $("#answer2").empty().append(answer2);
-        $("#answer3").empty().append(answer3);
-        $("#quizResults").empty();
-    });
 
         // Ask question
       $("#showQuiz").click(function() {
@@ -60,16 +43,14 @@ $(function() {
         var answer1 = quiz[ri].answer1;
         var answer2 = quiz[ri].answer2;
         var answer3 = quiz[ri].answer3;
+        var answer4 = quiz[ri].answer4;
 
-        $("#question").empty().append(question);
-        $("#answer1").empty().append(answer1);
-        $("#answer2").empty().append(answer2);
-        $("#answer3").empty().append(answer3);
-        $("#quizResults").empty();
+        $("#question").text(question);
+        $("#answer1").text(answer1);
+        $("#answer2").text(answer2);
+        $("#answer3").text(answer3);
+        $("#answer4").text(answer4);
     });
-
-});
-
 
 function Pizza(pizzaSize, toppings, pizzaQuantity) {
   this.pizzaSize = pizzaSize;
@@ -96,9 +77,6 @@ Pizza.prototype.totalPriceCalc = function() {
 
 
 $(document).ready(function() {
-  // Modal Load
-    $('.modal').modal('show');
-  // End Modal Load
   $('.carousel').carousel({
     pause: true,
     interval: false
@@ -126,6 +104,7 @@ $(document).ready(function() {
       $('html, body').animate({
         scrollTop: $("#output").offset().top
       }, 800);
+
       $("div#output").html('<div class="result container-fluid">' +
         '<div class="container">' +
           '<h3>Thank you for ordering ' +
@@ -136,11 +115,20 @@ $(document).ready(function() {
           '<h2>Your total is $' +
           totalPrice +
           '.00 dollars</h2>' +
+          // DEFINITION BUTTON
+          '<span id="definition">' +
+            '<button type="button" class="btn">Definition Button Here</button>' +
+          '</span>' +
+          // END DEFINITION BUTTON
           '<div class="video-container">' +
             '<iframe width="800px" height="450px" src="https://www.youtube.com/embed/CJEoASUMZbI" frameborder="0" allowfullscreen></iframe>' +
           '</div>' +
         '</div>' +
       '</div>');
+      $("#definition").click(function() {
+       $("#myCarousel").slideToggle("slow");
+      });
     });
   });
+});
 });
