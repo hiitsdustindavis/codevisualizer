@@ -1,3 +1,5 @@
+
+
 function quizConstructor(question, answer1, answer2, answer3, answer4) {
         this.question = question;
         this.answer1 = answer1;
@@ -79,6 +81,9 @@ Pizza.prototype.totalPriceCalc = function() {
 
 
 $(document).ready(function() {
+  // Modal Load
+    $('.modal').modal('show');
+  // End Modal Load
   $('.carousel').carousel({
     pause: true,
     interval: false
