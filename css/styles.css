@@ -104,8 +104,11 @@ background-color: red:
   box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
   font-family: 'Playfair Display', serif;
 }
+
+strong { font-family: 'Playfair Display', Arial, serif; font-weight: 700; }
+
 .item img {
-  max-width: 300px;
+  max-width: 260px;
 }
 pre {
   background-color: #373737;
