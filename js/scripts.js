@@ -36,9 +36,7 @@ $(function() {
       event.preventDefault();
   });
 
-   $("#definition").click(function() {
-    $("#myCarousel").slideToggle("slow");
-  });
+
 
       $("#nextQuestion").click(function() {
 
@@ -54,7 +52,7 @@ $(function() {
         var answer1 = quiz[questionCounter].answer1;
         var answer2 = quiz[questionCounter].answer2;
         var answer3 = quiz[questionCounter].answer3;
-      
+
         $("#question").empty().append(question);
         $("#answer1").empty().append(answer1);
         $("#answer2").empty().append(answer2);
@@ -91,7 +89,7 @@ $(function() {
         $("#answer1").empty().append(answer1);
         $("#answer2").empty().append(answer2);
         $("#answer3").empty().append(answer3);
-        
+
     });
 
 });
@@ -162,11 +160,17 @@ $(document).ready(function() {
           '<h2>Your total is $' +
           totalPrice +
           '.00 dollars</h2>' +
+          '<span id="definition">' +
+            '<button type="button" class="btn">Definition Button Here</button>' +
+          '</span>' +
           '<div class="video-container">' +
             '<iframe width="800px" height="450px" src="https://www.youtube.com/embed/CJEoASUMZbI" frameborder="0" allowfullscreen></iframe>' +
           '</div>' +
         '</div>' +
       '</div>');
+      $("#definition").click(function() {
+       $("#myCarousel").slideToggle("slow");
+     });
     });
   });
 });
