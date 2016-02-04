@@ -7,6 +7,7 @@ describe('quizConstructor', function() {
     expect(testQuiz.answer1).to.equal(this.answer2);
     expect(testQuiz.answer3).to.equal(this.answer3);
   });
+  
   it("Checks to see what argument is at index 0 in the array.", function() {
   	var quiz = new Array();
     quiz[0] = new quizConstructor("this.question", "this.answer1", "this.answer2", "this.answer3")
