@@ -9,6 +9,16 @@
   margin-bottom: 0px;
 }
 
+/*MODAL STYLES*/
+.modal-header {
+  padding: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
 /*BUTTON STYLES*/
 .btn {
   background-color: #f9583c;
