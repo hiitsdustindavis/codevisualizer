@@ -79,6 +79,10 @@ Pizza.prototype.totalPriceCalc = function() {
 
 
 $(document).ready(function() {
+  $('.carousel').carousel({
+    pause: true,
+    interval: false
+});
   $("form#pizza-options").submit(function(event) {
     event.preventDefault();
 

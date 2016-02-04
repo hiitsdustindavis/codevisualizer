@@ -4,6 +4,7 @@
     <title>Slice of Paradise</title>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -28,10 +29,16 @@
           </select>
 <!-- DEFINITION BUTTON -->
           <span id="definition">
-            <button type="button" class="btn btn-success">Definition Button Here</button>
+            <button type="button" class="btn">Definition Button Here</button>
           </span>
+          <!-- END DEFINITION BUTTON -->
+          <!-- QUIZ BUTTON -->
+          <span id="showQuiz">
+          <button type="button" class="btn btn-danger">Take The Quiz!</button>
+          </span>
+          <!-- END QUIZ BUTTON -->
         </div>
-<!-- END DEFINITION BUTTON -->
+
 
 
 <!-- INPUT QUANTITY -->
@@ -65,66 +72,102 @@
         <!--Carousel-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <div class="container">
-            <ol class="carousel-indicators">
+            <!-- <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2"></li>
               <li data-target="#myCarousel" data-slide-to="3"></li>
-            </ol>
+            </ol> -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img class="carousel-background-color" src="img/red-background.svg">
-                <h3>Constructor Function</h3>
-                <div class="col-md-6">
-                <img class="img-responsive" src="img/constructor-blue-print.svg">
+
+                <h2><em>Constructor Function</em></h2>
+                <div class="col-md-4">
+                <img class="subject img-responsive" src="img/constructor-blue-print.svg">
                 </div>
-                <div class="col-md-6">
-                <p class="lead">A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                </div>
+                <div class="col-md-4">
+                <h3><em>Code Preview</em></h3>
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+  this.pizzaSize = pizzaSize;
+  this.pizzaToppings = [];
+  this.pizzaQuantity = pizzaQuantity
+          }</pre>
+
                 </div>
               </div>
 
               <div class="item">
-                <h3>New Item 2</h3>
-                <div class="col-md-6">
+                <h2><em>Subject 2</em></h2>
+                <div class="col-md-4">
+                <img class="subject img-responsive" src="img/constructor-blue-print.svg">
                 </div>
-                <div class="col-md-6">
-                  <!-- QUIZ BUTTON -->
-                  <span id="showQuiz">
-                  <button type="button" class="btn btn-danger">Take The Quiz!</button>
-                  </span>
-                  <!-- END QUIZ BUTTON -->
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
                 </div>
-              </div>
-
-              <div class="item">
-                <h3>New Item 3</h3>
-                <div class="col-md-6">
-                <img src="img/constructor-blue-print.svg">
-                </div>
-                <div class="col-md-6">
-                <p class="lead">A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <div class="col-md-4">
+                <h3><em>Code Preview</em></h3>
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+  this.pizzaSize = pizzaSize;
+  this.pizzaToppings = [];
+  this.pizzaQuantity = pizzaQuantity
+          }</pre>
                 </div>
               </div>
 
               <div class="item">
-                <h3>New Item 4</h3>
-                <div class="col-md-6">
-                <img src="img/constructor-blue-print.svg">
+                <h2><em>Subject 3</em></h2>
+                <div class="col-md-4">
+                <img class="subject img-responsive" src="img/constructor-blue-print.svg">
                 </div>
-                <div class="col-md-6">
-                <p class="lead">A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                </div>
+                <div class="col-md-4">
+                <h3><em>Code Preview</em></h3>
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+  this.pizzaSize = pizzaSize;
+  this.pizzaToppings = [];
+  this.pizzaQuantity = pizzaQuantity
+          }</pre>
+                </div>
+              </div>
+
+              <div class="item">
+                <h2><em>Subject 4</em></h2>
+                <div class="col-md-4">
+                <img class="subject img-responsive" src="img/constructor-blue-print.svg">
+                </div>
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                </div>
+                <div class="col-md-4">
+                <h3><em>Code Preview</em></h3>
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+  this.pizzaSize = pizzaSize;
+  this.pizzaToppings = [];
+  this.pizzaQuantity = pizzaQuantity
+          }</pre>
                 </div>
               </div>
 
           </div>
 
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-              <span class="icon-prev" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
+            <a href="#myCarousel" role="button" data-slide="prev">
+              <button class="btn left"><em>Prev</em></button>
+              <!-- <span class="icon-prev" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span> -->
             </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-              <span class="icon-next" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
+            <a href="#myCarousel" role="button" data-slide="next">
+              <button class="btn right"><em>Next</em></button>
+              <!-- <span class="icon-next" aria-hidden="true"></span>
+              <span class="sr-only">Next</span> -->
             </a>
           </div>
         </div>
