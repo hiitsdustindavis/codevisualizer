@@ -7,6 +7,7 @@ function quizConstructor(question, answer1, answer2, answer3, answer4) {
         this.answer3 = answer3;
     }
 
+
     // Create quiz array
     var quiz = new Array();
 
