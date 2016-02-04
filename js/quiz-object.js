@@ -7,7 +7,10 @@ function Question(question, answer1, answer2, answer3, answer4) {
 	this.answer4 = answer4;
 }
 
-var quizArray = [[question, answer1, answer2, answer3, answer4],[question, answer1, answer2, answer3, answer4]];
+var quizArray = [
+[question, answer1, answer2, answer3, answer4],
+[question, answer1, answer2, answer3, answer4]
+];
 
 Question.prototype.randomSplice = function() {
     var ri = Math.floor(Math.random() * quizArray.length);
@@ -20,4 +23,4 @@ Question.prototype.randomSplice = function() {
 
 var newQuestion = new Question(question,answer1,answer2,answer3);
 
-var questionAsked = newQuestion.randomsplice();
+var questionAsked = newQuestion.randomSplice();

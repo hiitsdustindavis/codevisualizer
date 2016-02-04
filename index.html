@@ -8,12 +8,31 @@
 </head>
 
 <body>
+
+<!-- Modal -->
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title"><em>Welcome to Object Oriented Programming for Visual Learners</em></h4>
+        </div>
+        <div class="modal-body">
+          <p>The purpose of this page is to help visual learners like you and I learn the ins and outs of Object Oriented Programming. Explore this example website a bit and try out the form and then once you've seen what's up, check under the hood!<br><br>Object Oriented Programming (OOP) refers to using self-contained pieces of code to develop applications. We call these self-contained pieces of code objects, better known as Classes in most OOP programming languages and Functions in JavaScript. In JavaScript, almost "everything" is an object: Booleans, numbers, and strings can be objects, and dates, maths, regular expressions, arrays, and functions are always objects. All values, except primitive values, are objects.<br><br>Remember this, at the end there will be a quiz!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Take a look!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Modal -->
+
   <div class="jumbotron header">
     <div class="container">
       <h1>Welcome to a Slice of Paradise</h1>
     </div>
   </div>
-
 
   <div class="form container-fluid">
   <div class="container">
@@ -34,7 +53,10 @@
           <!-- END DEFINITION BUTTON -->
           <!-- QUIZ BUTTON -->
           <span id="showQuiz">
-          <button type="button" class="btn btn-danger">Take The Quiz!</button>
+          <button type="button" class="btn btn-danger">Launch The Quiz!</button>
+          </span>
+          <span id="nextQuestion">
+          <button type="button" class="btn btn-danger">Next Question</button>
           </span>
           <!-- END QUIZ BUTTON -->
         </div>
@@ -92,10 +114,10 @@
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
                 <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                  this.pizzaSize = pizzaSize;
+                  this.pizzaToppings = [];
+                  this.pizzaQuantity = pizzaQuantity
+                }</pre>
 
                 </div>
               </div>
@@ -112,10 +134,10 @@
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
                 <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
                 </div>
               </div>
 
@@ -130,6 +152,7 @@
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
+
                 <pre>Pizza.prototype.sizePriceCalc = function() {
   if (this.pizzaSize === "Medium") {
     return 8;
@@ -137,6 +160,13 @@
   }
     return 12;
   }</pre>
+
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
+
                 </div>
               </div>
 
@@ -169,11 +199,25 @@
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
+
                 <pre>Pizza.prototype.totalPriceCalc = function() {
 return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
 }</pre>
+
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
+
                 </div>
               </div>
+              <div class = "item">
+                <span id="showQuiz">
+                <button type="button" class="btn btn-danger">Take The Quiz!</button>
+                </span>
+              </div>
+
 
           </div>
 
@@ -197,31 +241,22 @@ return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) 
       <div class="well">
         <div class="radio">
           <div id="question"></div>
-          <label>
-            <input type="radio" name="answer" id="once" value=1 >
-            <div id="answer1"></div>
+          <label id="answer1">
+
           </label>
         </div>
         <div class="radio">
-          <label>
-            <input type="radio" name="answer" id="twice" value=0 >
-            <div id="answer2"></div>
+          <label id="answer2">
+
           </label>
         </div>
         <div class="radio">
-          <label>
-            <input type="radio" name="answer" id="forever" value=0 >
-            <div id="answer3"></div>
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="answer" id="index" value=0 >
-            <div id="answer4"></div>
+          <label id="answer3">
+
           </label>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit Answer</button>
     </form>
     <div id="quizResults">
     </div>
@@ -237,5 +272,4 @@ return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) 
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
 </body>
-
 </html>
