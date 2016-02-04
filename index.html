@@ -10,7 +10,7 @@
 <body>
 
 <!-- Modal -->
-  <div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal fade" id="openModal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -52,12 +52,12 @@
           </span> -->
           <!-- END DEFINITION BUTTON -->
           <!-- QUIZ BUTTON -->
-          <span id="showQuiz">
+          <!-- <span id="showQuiz">
           <button type="button" class="btn btn-danger">Launch The Quiz!</button>
           </span>
           <span id="nextQuestion">
           <button type="button" class="btn btn-danger">Next Question</button>
-          </span>
+          </span> -->
           <!-- END QUIZ BUTTON -->
         </div>
 
@@ -154,13 +154,13 @@
                 <h3><em>Code Preview</em></h3>
 
                 <pre>Pizza.prototype.sizePriceCalc = function() {
-  if (this.pizzaSize === "Medium") {
-    return 8;
-  } else {
-  }
-    return 12;
-  }</pre>
-                </div>
+                if (this.pizzaSize === "Medium") {
+                  return 8;
+                } else {
+                }
+                  return 12;
+                }</pre>
+              </div>
               </div>
 
               <div class="item">
@@ -175,9 +175,9 @@
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
                 <pre>Pizza.prototype.toppingsPriceCalc = function() {
-  var totalToppings = this.pizzaToppings.length;
-    return totalToppings;
-}</pre>
+                  var totalToppings = this.pizzaToppings.length;
+                    return totalToppings;
+                }</pre>
                 </div>
               </div>
 
@@ -194,14 +194,14 @@
                 <h3><em>Code Preview</em></h3>
 
                 <pre>Pizza.prototype.totalPriceCalc = function() {
-return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
-}</pre>
+                return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
+                }</pre>
 
               </div>
               </div>
               <div class = "item">
                 <span id="showQuiz">
-                <button type="button" class="btn btn-danger">Take The Quiz!</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#quizModal">Take The Quiz!</button>
                 </span>
               </div>
 
@@ -223,31 +223,48 @@ return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) 
 
 <!--End Carousel-->
 
-<!-- START QUESTIONS-->
-    <form id="myForm">
-      <div class="well">
-        <div class="radio">
-          <div id="question"></div>
-          <label id="answer1">
-
-          </label>
-        </div>
-        <div class="radio">
-          <label id="answer2">
-
-          </label>
-        </div>
-        <div class="radio">
-          <label id="answer3">
-
-          </label>
-        </div>
+<!-- Quiz Modal -->
+<div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><em>Test Your Knowledge!</em></h4>
       </div>
-      <button type="submit" class="btn btn-primary">Submit Answer</button>
-    </form>
-    <div id="quizResults">
+      <div class="modal-body">
+        <!-- START QUESTIONS-->
+            <form id="myForm">
+              <div class="well">
+                <div class="radio">
+                  <div id="question"></div>
+                  <label id="answer1">
+
+                  </label>
+                </div>
+                <div class="radio">
+                  <label id="answer2">
+
+                  </label>
+                </div>
+                <div class="radio">
+                  <label id="answer3">
+
+                  </label>
+                </div>
+              </div>
+        <!-- END QUESTIONS-->
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="submit" class="btn btn-default">Submit Answer</button>
+      </form>
+      <div id="quizResults">
+      </div>
+      </div>
     </div>
-<!-- END QUESTIONS-->
+  </div>
+</div>
+<!-- End Quiz Modal -->
 
       <!-- END UNDER THE HOOD CONTAINER-FLUID -->
 <!-- END Under the Hood and Quiz DIV -->
