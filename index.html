@@ -245,43 +245,39 @@ return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) 
         <h4 class="modal-title" id="myModalLabel"><em>Test Your Knowledge!</em></h4>
       </div>
       <div class="modal-body">
-        Insert Quiz Here
+        <!-- START QUESTIONS-->
+            <form id="myForm">
+              <div class="well">
+                <div class="radio">
+                  <div id="question"></div>
+                  <label id="answer1">
+
+                  </label>
+                </div>
+                <div class="radio">
+                  <label id="answer2">
+
+                  </label>
+                </div>
+                <div class="radio">
+                  <label id="answer3">
+
+                  </label>
+                </div>
+              </div>
+        <!-- END QUESTIONS-->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="submit" class="btn btn-default">Submit Answer</button>
+      </form>
+      <div id="quizResults">
+      </div>
       </div>
     </div>
   </div>
 </div>
 <!-- End Quiz Modal -->
-
-
-
-<!-- START QUESTIONS-->
-    <form id="myForm">
-      <div class="well">
-        <div class="radio">
-          <div id="question"></div>
-          <label id="answer1">
-
-          </label>
-        </div>
-        <div class="radio">
-          <label id="answer2">
-
-          </label>
-        </div>
-        <div class="radio">
-          <label id="answer3">
-
-          </label>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit Answer</button>
-    </form>
-    <div id="quizResults">
-    </div>
-<!-- END QUESTIONS-->
 
       <!-- END UNDER THE HOOD CONTAINER-FLUID -->
 <!-- END Under the Hood and Quiz DIV -->
