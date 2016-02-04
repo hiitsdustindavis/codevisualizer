@@ -97,7 +97,7 @@ Pizza.prototype.totalPriceCalc = function() {
 
 $(document).ready(function() {
   // Modal Load
-    $('.modal').modal('show');
+    $('#openModal').modal('show');
   // End Modal Load
   $('.carousel').carousel({
     pause: true,
