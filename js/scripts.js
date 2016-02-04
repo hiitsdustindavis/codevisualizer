@@ -39,11 +39,11 @@ $(function() {
   });
 
       $("#nextQuestion").click(function() {
-        var ri = Math.floor(Math.random() * quiz.length);
+        var ri       = Math.floor(Math.random() * quiz.length);
         var question = quiz[ri].question;
-        var answer1 = quiz[ri].answer1;
-        var answer2 = quiz[ri].answer2;
-        var answer3 = quiz[ri].answer3;
+        var answer1  = quiz[ri].answer1;
+        var answer2  = quiz[ri].answer2;
+        var answer3  = quiz[ri].answer3;
 
         $("#question").empty().append(question);
         $("#answer1").empty().append(answer1);
@@ -55,11 +55,11 @@ $(function() {
         // Ask question
       $("#showQuiz").click(function() {
         $("#myForm").show();
-        var ri = Math.floor(Math.random() * quiz.length);
+        var ri       = Math.floor(Math.random() * quiz.length);
         var question = quiz[ri].question;
-        var answer1 = quiz[ri].answer1;
-        var answer2 = quiz[ri].answer2;
-        var answer3 = quiz[ri].answer3;
+        var answer1  = quiz[ri].answer1;
+        var answer2  = quiz[ri].answer2;
+        var answer3  = quiz[ri].answer3;
 
         $("#question").empty().append(question);
         $("#answer1").empty().append(answer1);
