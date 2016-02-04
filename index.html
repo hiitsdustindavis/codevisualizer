@@ -125,16 +125,18 @@
                 <img class="subject img-responsive" src="img/sizePriceCalc.svg">
                 </div>
                 <div class="col-md-4">
-                <h3><em>What is it?</em></h3>
-                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <h3><em>What's it doing?</em></h3>
+                <p>The Size Price Calculator takes the user's input and returns 8 if they select "Medium" and 12 if the select "Large."</p>
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
-                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                <pre>Pizza.prototype.sizePriceCalc = function() {
+  if (this.pizzaSize === "Medium") {
+    return 8;
+  } else {
+  }
+    return 12;
+  }</pre>
                 </div>
               </div>
 
@@ -144,16 +146,15 @@
                 <img class="subject img-responsive" src="img/toppingsPriceCalc.svg">
                 </div>
                 <div class="col-md-4">
-                <h3><em>What is it?</em></h3>
-                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <h3><em>What's it doing?</em></h3>
+                <p>When toppings are selected they are stored into an empty array and hold a value of 1. The Toppings Price Calculator uses the .length property and returns the number items selected into a combined value.</p>
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
-                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaToppings = [];
-  this.pizzaQuantity = pizzaQuantity
-          }</pre>
+                <pre>Pizza.prototype.toppingsPriceCalc = function() {
+  var totalToppings = this.pizzaToppings.length;
+    return totalToppings;
+}</pre>
                 </div>
               </div>
 
@@ -163,8 +164,8 @@
                 <img class="subject img-responsive" src="img/totalPriceCalc.svg">
                 </div>
                 <div class="col-md-4">
-                <h3><em>What is it?</em></h3>
-                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <h3><em>What's it doing?</em></h3>
+                <p>This Pizza Prototype takes the user's input from the Pizza Size, Quantity, and Toppings Selection. It produces a final price by adding the Size and Toppings selection values and multiplying that number by the Quantity input value.</p>
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
