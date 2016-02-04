@@ -38,6 +38,19 @@ $(function() {
     $("#myCarousel").slideToggle("slow");
   });
 
+      $("#nextQuestion").click(function() {
+        var ri = Math.floor(Math.random() * quiz.length);
+        var question = quiz[ri].question;
+        var answer1 = quiz[ri].answer1;
+        var answer2 = quiz[ri].answer2;
+        var answer3 = quiz[ri].answer3;
+
+        $("#question").empty().append(question);
+        $("#answer1").empty().append(answer1);
+        $("#answer2").empty().append(answer2);
+        $("#answer3").empty().append(answer3);
+        $("#quizResults").empty();
+    });
 
         // Ask question
       $("#showQuiz").click(function() {
@@ -52,6 +65,7 @@ $(function() {
         $("#answer1").empty().append(answer1);
         $("#answer2").empty().append(answer2);
         $("#answer3").empty().append(answer3);
+        $("#quizResults").empty();
     });
 
 });
