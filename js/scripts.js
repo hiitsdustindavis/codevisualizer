@@ -1,5 +1,5 @@
 
-function quizConstructor(question, answer1, answer2, answer3, answer4) {
+function quizConstructor(question, answer1, answer2, answer3) {
 
         this.question = question;
         this.answer1 = answer1;
@@ -11,13 +11,13 @@ function quizConstructor(question, answer1, answer2, answer3, answer4) {
     var quiz = new Array();
 
     // All quiz questions and answers
-    quiz[0] = new quizConstructor("Prototypes are which?: ","A model of your website","A property whose value is a function","Objects from which other objects inherit");
-    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","Always objects in JavaScript.","Sometimes objects.","Never objects.");
-    quiz[2] = new quizConstructor("Loops are used for: ","looping through a block of code a number of times.","looping your JavaScript together with your HTML.","Looping through your specs.");
-    quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","UI Logic","Business Logic","Inductive Logic");
-    quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","a Constructor.","a Creator.", "a Variable.");
-    quiz[5] = new quizConstructor("A variable declared outside a function is: ","Local, only usable with one function.", "Global, usable with all functions.", "Literal.");
-    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","Parameter.","Argument.","Variable.","Function.");
+    quiz[0] = new quizConstructor("Prototypes are which?: ","<input type='radio' name='answer' id='once' value=0> A model of your website","<input type='radio' name='answer' id='once' value=1>A property whose value is a function","<input type='radio' name='answer' id='once' value=0>Objects from which other objects inherit");
+    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","<input type='radio' name='answer' id='once' value=0>Always objects in JavaScript.","<input type='radio' name='answer' id='once' value=0>Sometimes objects.","<input type='radio' name='answer' id='once' value=1>Never objects.");
+    quiz[2] = new quizConstructor("Loops are used for: ","<input type='radio' name='answer' id='once' value=1>Looping through a block of code a number of times.","<input type='radio' name='answer' id='once' value=0>Looping your JavaScript together with your HTML.","<input type='radio' name='answer' id='once' value=0>Looping through your specs.");
+    quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","<input type='radio' name='answer' id='once' value=0>UI Logic","<input type='radio' name='answer' id='once' value=1>Business Logic","<input type='radio' name='answer' id='once' value=0>Inductive Logic");
+    quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","<input type='radio' name='answer' id='once' value=1>Constructor.","<input type='radio' name='answer' id='once' value=0>Creator.","<input type='radio' name='answer' id='once' value=0>Variable.");
+    quiz[5] = new quizConstructor("A variable declared outside a function is: ","<input type='radio' name='answer' id='once' value=0>Local, only usable with one function.", "<input type='radio' name='answer' id='once' value=1>Global, usable with all functions.", "<input type='radio' name='answer' id='once' value=0>Literal.");
+    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","<input type='radio' name='answer' id='once' value=0>Parameter.","<input type='radio' name='answer' id='once' value=0>Variable.","<input type='radio' name='answer' id='once' value=1>Function.");
 
 
 $(function() {
@@ -46,13 +46,11 @@ $(function() {
         var answer1 = quiz[ri].answer1;
         var answer2 = quiz[ri].answer2;
         var answer3 = quiz[ri].answer3;
-        var answer4 = quiz[ri].answer4;
 
-        $("#question").text(question);
-        $("#answer1").text(answer1);
-        $("#answer2").text(answer2);
-        $("#answer3").text(answer3);
-        $("#answer4").text(answer4);
+        $("#question").empty().append(question);
+        $("#answer1").empty().append(answer1);
+        $("#answer2").empty().append(answer2);
+        $("#answer3").empty().append(answer3);
     });
 
 });
