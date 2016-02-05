@@ -15,7 +15,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title"><em>Welcome to Object Oriented Programming for Visual Learners</em></h4>
+          <h1 class="modal-title"><em>Welcome to Object Oriented Programming for Visual Learners</em></h1>
         </div>
         <div class="modal-body">
           <p>The purpose of this page is to help visual learners like you and I learn the ins and outs of Object Oriented Programming. Explore this example website a bit and try out the form and then once you've seen what's up, check under the hood!<br><br>Object Oriented Programming (OOP) refers to using self-contained pieces of code to develop applications. We call these self-contained pieces of code objects, better known as Classes in most OOP programming languages and Functions in JavaScript. In JavaScript, almost "everything" is an object: Booleans, numbers, and strings can be objects, and dates, maths, regular expressions, arrays, and functions are always objects. All values, except primitive values, are objects.<br><br>Remember this, at the end there will be a quiz!</p>
@@ -142,6 +142,25 @@
               </div>
 
               <div class="item">
+                <h2><em>Variables</em></h2>
+                <div class="col-md-3">
+                <img class="subject img-responsive" src="img/variable.svg">
+                </div>
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>If a Constructor is the blueprint for the house, then one of the properties is the plumbing. A property is a specification of the Constructor Function that is made up of a <strong>key</strong> and <strong>value</strong></p>
+                </div>
+                <div class="col-md-5">
+                <h3><em>Code Preview</em></h3>
+                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
+                this.pizzaSize = pizzaSize;
+                this.pizzaToppings = [];
+                this.pizzaQuantity = pizzaQuantity
+                }</pre>
+                </div>
+              </div>
+
+              <div class="item">
                 <h2><em>Prototype:</em> Size Price Calculator</h2>
                 <div class="col-md-3">
                 <img class="subject img-responsive" src="img/sizePriceCalc.svg">
@@ -160,13 +179,6 @@
                 }
                   return 12;
                 }</pre>
-
-                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-                this.pizzaSize = pizzaSize;
-                this.pizzaToppings = [];
-                this.pizzaQuantity = pizzaQuantity
-                }</pre>
-
                 </div>
               </div>
 
@@ -203,13 +215,6 @@
                 <pre>Pizza.prototype.totalPriceCalc = function() {
                 return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
                 }</pre>
-
-                <pre>function Pizza(pizzaSize, toppings, pizzaQuantity) {
-                this.pizzaSize = pizzaSize;
-                this.pizzaToppings = [];
-                this.pizzaQuantity = pizzaQuantity
-                }</pre>
-
                 </div>
               </div>
               <div class = "item">
@@ -218,6 +223,23 @@
                 </span>
               </div>
 
+              <div class="item">
+                <h2><em>Logic:</em> Business or User Interface?</h2>
+                <div class="col-md-3">
+                <img class="subject img-responsive" src="img/toppingsPriceCalc.svg">
+                </div>
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>Everything that occurs before your Document Ready function is the Business logic which evaluates and manipulates data. Everything after the Document Ready function is the User Interface logic which employs the output of the Business Logic and sends it to specified areas of the index.html.</p>
+                </div>
+                <div class="col-md-5">
+                <h3><em>Code Preview</em></h3>
+                <pre>Pizza.prototype.toppingsPriceCalc = function() {
+                  var totalToppings = this.pizzaToppings.length;
+                    return totalToppings;
+                }</pre>
+                </div>
+              </div>
 
           </div>
 
@@ -242,7 +264,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"><em>Test Your Knowledge!</em></h4>
+        <h1 class="modal-title" id="myModalLabel"><em>Test Your Knowledge!</em></h1>
       </div>
       <div class="modal-body">
         <!-- START QUESTIONS-->
@@ -269,6 +291,7 @@
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="submit" id = "nextQuestion" class="btn btn-default">Next Question</button>
         <button type="submit" class="btn btn-default">Submit Answer</button>
       </form>
       <div id="quizResults">

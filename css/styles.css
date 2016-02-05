@@ -47,7 +47,7 @@
 .result.container-fluid .container{
   background-color: #FFA876;
   padding: 50px 0px 100px 0px;
-  text-align: center;
+  /*text-align: center;*/
 }
 .video-container {
     position: relative;
@@ -127,9 +127,14 @@ pre {
 button.btn.left {
   font-size: 1.5em;
   float: left;
+  color: #FFF0D9;
+  background-color: #373737;
 }
 button.btn.right {
   font-size: 1.5em;
+  color: #FFF0D9;
+  background-color: #373737;
 }
+
 
 /*END   LOOK UNDER THE HOOD & QUIZ*/

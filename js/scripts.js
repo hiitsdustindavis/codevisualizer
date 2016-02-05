@@ -9,7 +9,6 @@ function quizConstructor(question, answer1, answer2, answer3) {
 
 
     // Create quiz array
-    var total = 0;
     var questionCounter = 0;
     var quiz = new Array();
 
@@ -20,7 +19,7 @@ function quizConstructor(question, answer1, answer2, answer3) {
     quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","<input type='radio' name='answer' id='once' value=0>UI Logic","<input type='radio' name='answer' id='once' value=1>Business Logic","<input type='radio' name='answer' id='once' value=0>Inductive Logic");
     quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","<input type='radio' name='answer' id='once' value=1>Constructor.","<input type='radio' name='answer' id='once' value=0>Creator.","<input type='radio' name='answer' id='once' value=0>Variable.");
     quiz[5] = new quizConstructor("A variable declared outside a function is: ","<input type='radio' name='answer' id='once' value=0>Local, only usable with one function.", "<input type='radio' name='answer' id='once' value=1>Global, usable with all functions.", "<input type='radio' name='answer' id='once' value=0>Literal.");
-    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","<input type='radio' name='answer' id='once' value=0>Parameter.","<input type='radio' name='answer' id='once' value=0>Variable.","<input type='radio' name='answer' id='once' value=1>Function.");
+    quiz[6] = new quizConstructor("(Last Question) In JavaScript, a block of code designed to perform a particular task is a: ","<input type='radio' name='answer' id='once' value=0>Parameter.","<input type='radio' name='answer' id='once' value=0>Variable.","<input type='radio' name='answer' id='once' value=1>Function.");
 
 
 $(function() {
@@ -29,7 +28,7 @@ $(function() {
 
       if (userAnswer === 1) {
         $("#quizResults").text("Congatulations, you passed!");
-      } else {
+      } else  {
         $("#quizResults").text("You're stupid, try again.");
       }
 
@@ -40,14 +39,7 @@ $(function() {
 
       $("#nextQuestion").click(function() {
 
-        var ri       = Math.floor(Math.random() * quiz.length);
-        var question = quiz[ri].question;
-        var answer1  = quiz[ri].answer1;
-        var answer2  = quiz[ri].answer2;
-        var answer3  = quiz[ri].answer3;
-
         if (questionCounter < 7) {
-        //var ri = Math.floor(Math.random() * 7);
         var question = quiz[questionCounter].question;
         var answer1 = quiz[questionCounter].answer1;
         var answer2 = quiz[questionCounter].answer2;
@@ -69,13 +61,7 @@ $(function() {
       $("#showQuiz").click(function() {
         $("#myForm").show();
 
-        var ri       = Math.floor(Math.random() * quiz.length);
-        var question = quiz[ri].question;
-        var answer1  = quiz[ri].answer1;
-        var answer2  = quiz[ri].answer2;
-        var answer3  = quiz[ri].answer3;
 
-        //var ri = Math.floor(Math.random() * quiz.length);
         var question = quiz[0].question;
         var answer1 = quiz[0].answer1;
         var answer2 = quiz[0].answer2;
@@ -89,9 +75,8 @@ $(function() {
         $("#answer1").empty().append(answer1);
         $("#answer2").empty().append(answer2);
         $("#answer3").empty().append(answer3);
-
+        $("quizResults").empty();
     });
-
 });
 
 
@@ -152,6 +137,10 @@ $(document).ready(function() {
       }, 800);
       $("div#output").html('<div class="result container-fluid">' +
         '<div class="container">' +
+        '<div id="definition">' +
+          '<button type="button" class="btn right">Look Under the Hood!</button>' +
+        '</div>' +
+        '<br>' +
           '<h3>Thank you for ordering ' +
           inputtedQuantity +
           ' <em>"' +
@@ -160,9 +149,6 @@ $(document).ready(function() {
           '<h2>Your total is $' +
           totalPrice +
           '.00 dollars</h2>' +
-          '<span id="definition">' +
-            '<button type="button" class="btn">Definition Button Here</button>' +
-          '</span>' +
           '<div class="video-container">' +
             '<iframe width="800px" height="450px" src="https://www.youtube.com/embed/CJEoASUMZbI" frameborder="0" allowfullscreen></iframe>' +
           '</div>' +
