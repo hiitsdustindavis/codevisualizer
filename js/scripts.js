@@ -1,46 +1,44 @@
-function quizConstructor(question, answer1, answer2, answer3, answer4) {
+
+function quizConstructor(question, answer1, answer2, answer3) {
+
         this.question = question;
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
-        this.answer4 = answer4;
     }
 
+
     // Create quiz array
-    var total = 0;
     var questionCounter = 0;
     var quiz = new Array();
 
     // All quiz questions and answers
-    quiz[0] = new quizConstructor("Prototypes are which?: ","A model of your website","A property whose value is a function","Objects from which other objects inherit");
-    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","Always objects in JavaScript.","Sometimes objects.","Never objects.");
-    quiz[2] = new quizConstructor("Loops are used for: ","looping through a block of code a number of times.","looping your JavaScript together with your HTML.","Looping through your specs.");
-    quiz[3] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","UI Logic","Business Logic","Inductive Logic");
-    quiz[4] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","a Constructor.","a Creator.", "a Variable.");
-    quiz[5] = new quizConstructor("A variable declared outside a function is: ","Local, only usable with one function.", "Global, usable with all functions.", "Literal.");
-    quiz[6] = new quizConstructor("In JavaScript, a block of code designed to perform a particular task is a: ","Parameter.","Argument.","Variable.","Function.");
+    quiz[0] = new quizConstructor("Prototypes are which?: ","<input type='radio' name='answer' id='once' value=0> A model of your website","<input type='radio' name='answer' id='once' value=0>A property whose value is a function","<input type='radio' name='answer' id='once' value=1>Objects from which other objects inherit");
+    quiz[1] = new quizConstructor("Booleans, numbers, and strings are: ","<input type='radio' name='answer' id='once' value=0>Always objects in JavaScript.","<input type='radio' name='answer' id='once' value=1>Sometimes objects.","<input type='radio' name='answer' id='once' value=0>Never objects.");
+    quiz[2] = new quizConstructor("The code responsible for handling the evaluation and manipulation of data is: ","<input type='radio' name='answer' id='once' value=0>UI Logic","<input type='radio' name='answer' id='once' value=1>Business Logic","<input type='radio' name='answer' id='once' value=0>Inductive Logic");
+    quiz[3] = new quizConstructor("A function that can be invoked using a new keyword to create new objects is: ","<input type='radio' name='answer' id='once' value=1>Constructor.","<input type='radio' name='answer' id='once' value=0>Creator.","<input type='radio' name='answer' id='once' value=0>Variable.");
+    quiz[4] = new quizConstructor("A variable declared outside a function is: ","<input type='radio' name='answer' id='once' value=0>Local, only usable with one function.", "<input type='radio' name='answer' id='once' value=1>Global, usable with all functions.", "<input type='radio' name='answer' id='once' value=0>Literal.");
+    quiz[5] = new quizConstructor("(Last Question) In JavaScript, a block of code designed to perform a particular task is a: ","<input type='radio' name='answer' id='once' value=0>Parameter.","<input type='radio' name='answer' id='once' value=0>Variable.","<input type='radio' name='answer' id='once' value=1>Function.");
 
 
- $(function() {
+$(function() {
   $("#myForm").submit(function(event) {
       var userAnswer = parseInt($('input[name=answer]:checked', '#myForm').val());
 
       if (userAnswer === 1) {
         $("#quizResults").text("Congatulations, you passed!");
-      } else {
-        $("#quizResults").text("You're stupid, try again.");
+      } else  {
+        $("#quizResults").text("Sorry, try again.");
       }
 
       event.preventDefault();
   });
 
 
-<<<<<<< HEAD
 
-=======
       $("#nextQuestion").click(function() {
-        if (questionCounter < 7) {
-        //var ri = Math.floor(Math.random() * 7);
+
+        if (questionCounter < 6) {
         var question = quiz[questionCounter].question;
         var answer1 = quiz[questionCounter].answer1;
         var answer2 = quiz[questionCounter].answer2;
@@ -58,12 +56,11 @@ function quizConstructor(question, answer1, answer2, answer3, answer4) {
         }
     });
 
-
         // Ask question
       $("#showQuiz").click(function() {
         $("#myForm").show();
 
-        //var ri = Math.floor(Math.random() * quiz.length);
+
         var question = quiz[0].question;
         var answer1 = quiz[0].answer1;
         var answer2 = quiz[0].answer2;
@@ -78,8 +75,9 @@ function quizConstructor(question, answer1, answer2, answer3, answer4) {
         $("#answer2").empty().append(answer2);
         $("#answer3").empty().append(answer3);
         $("quizResults").empty();
-
     });
+});
+
 
 function Pizza(pizzaSize, toppings, pizzaQuantity) {
   this.pizzaSize = pizzaSize;
@@ -106,11 +104,9 @@ Pizza.prototype.totalPriceCalc = function() {
 
 
 $(document).ready(function() {
-
   // Modal Load
     $('#openModal').modal('show');
   // End Modal Load
-
   $('.carousel').carousel({
     pause: true,
     interval: false
@@ -138,7 +134,6 @@ $(document).ready(function() {
       $('html, body').animate({
         scrollTop: $("#output").offset().top
       }, 800);
-
       $("div#output").html('<div class="result container-fluid">' +
         '<div class="container">' +
           '<h3>Thank you for ordering ' +
@@ -149,11 +144,9 @@ $(document).ready(function() {
           '<h2>Your total is $' +
           totalPrice +
           '.00 dollars</h2>' +
-          // DEFINITION BUTTON
-          '<span id="definition">' +
-            '<button type="button" class="btn">Definition Button Here</button>' +
-          '</span>' +
-          // END DEFINITION BUTTON
+          '<div id="definition">' +
+            '<button type="button" class="btn right">Look Under the Hood!</button>' +
+          '</div>' +
           '<div class="video-container">' +
             '<iframe width="800px" height="450px" src="https://www.youtube.com/embed/CJEoASUMZbI" frameborder="0" allowfullscreen></iframe>' +
           '</div>' +
@@ -161,8 +154,7 @@ $(document).ready(function() {
       '</div>');
       $("#definition").click(function() {
        $("#myCarousel").slideToggle("slow");
-      });
+     });
     });
   });
-});
 });

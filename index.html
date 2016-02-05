@@ -15,7 +15,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title"><em>Welcome to Object Oriented Programming for Visual Learners</em></h4>
+          <h1 class="modal-title"><em>Welcome to Object Oriented Programming for Visual Learners</em></h1>
         </div>
         <div class="modal-body">
           <p>The purpose of this page is to help visual learners like you and I learn the ins and outs of Object Oriented Programming. Explore this example website a bit and try out the form and then once you've seen what's up, check under the hood!<br><br>Object Oriented Programming (OOP) refers to using self-contained pieces of code to develop applications. We call these self-contained pieces of code objects, better known as Classes in most OOP programming languages and Functions in JavaScript. In JavaScript, almost "everything" is an object: Booleans, numbers, and strings can be objects, and dates, maths, regular expressions, arrays, and functions are always objects. All values, except primitive values, are objects.<br><br>Remember this, at the end there will be a quiz!</p>
@@ -46,7 +46,7 @@
             <option>Medium - $8</option>
             <option>Large - $12</option>
           </select>
-          <!-- DEFINITION BUTTON -->
+<!-- DEFINITION BUTTON -->
           <!-- <span id="definition">
             <button type="button" class="btn">Definition Button Here</button>
           </span> -->
@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-md-4">
                 <h3><em>What is it?</em></h3>
-                <p>A constructor is a function that can be invoked using the new keyword to create new objects. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
+                <p>A constructor is a function that can be invoked using the new keyword to create new objects. A function is a block of code designed to perforam a particular task. Constructor functions are used as a blueprint for creating many of the same type objects, and add properties.</p>
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
@@ -142,7 +142,28 @@
               </div>
 
               <div class="item">
-                <h2><em>Prototype:</em> Size Price Calculator</h2>
+                <h2><em>Prototype</em></h2>
+                <div class="col-md-3">
+                <img class="subject img-responsive" src="img/prototype.svg">
+                </div>
+                <div class="col-md-4">
+                <h3><em>What is it?</em></h3>
+                <p>Prototypes are objects from which other objects inherit. Prototypes store methods to be shared by all objects of the same constructor. <strong>For example:</strong>Pizza.prototype.sizePriceCalc is shared by all Pizza objects and is used in calculating the total price.</p>
+                </div>
+                <div class="col-md-5">
+                <h3><em>Code Preview</em></h3>
+                <pre>Pizza.prototype.sizePriceCalc = function() {
+                if (this.pizzaSize === "Medium") {
+                  return 8;
+                } else {
+                }
+                  return 12;
+                }</pre>
+                </div>
+              </div>
+
+              <div class="item">
+                <h2><em>Prototype Example:</em> Size Price Calculator</h2>
                 <div class="col-md-3">
                 <img class="subject img-responsive" src="img/sizePriceCalc.svg">
                 </div>
@@ -160,50 +181,54 @@
                 }
                   return 12;
                 }</pre>
-              </div>
-              </div>
-
-              <div class="item">
-                <h2><em>Prototype:</em> Toppings Price Calculator</h2>
-                <div class="col-md-3">
-                <img class="subject img-responsive" src="img/toppingsPriceCalc.svg">
-                </div>
-                <div class="col-md-4">
-                <h3><em>What's it doing?</em></h3>
-                <p>When toppings are selected they are stored into an empty array and hold a value of 1. The Toppings Price Calculator uses the .length property and returns the number items selected into a combined value.</p>
-                </div>
-                <div class="col-md-5">
-                <h3><em>Code Preview</em></h3>
-                <pre>Pizza.prototype.toppingsPriceCalc = function() {
-                  var totalToppings = this.pizzaToppings.length;
-                    return totalToppings;
-                }</pre>
                 </div>
               </div>
 
               <div class="item">
-                <h2><em>Prototype:</em> Total Price Calculator</h2>
+                <h2><em>Variables:</em></h2>
                 <div class="col-md-3">
-                <img class="subject img-responsive" src="img/totalPriceCalc.svg">
+                <img class="subject img-responsive" src="img/variable.svg">
+                </div>
+                <div class="col-md-6">
+                <h3><em>What is it?</em></h3>
+                <p>JavaScript variables are containers for storing data values. Variables are written as "var" in Javascript.<br>A variable declared outside a function becomes GLOBAL. A global variable has global scope: All scripts and functions on a web page can access it.<br>Local variables are only recognized inside their functions, so variables with the same name can be used in different functions. Local variables are created when a function starts, and deleted when the function is completed. </p>
+                </div>
+                <div class="col-md-3">
+                <h3><em>Code Preview</em></h3>
+
+                <pre>var totalPrice = (inputtedSizeVal + inputtedToppingsVal) * inputtedQuantity;</pre>
+
+                </div>
+              </div>
+
+              <div class="item">
+                <h2><em>Logic:</em> Business and User Interface</h2>
+                <div class="col-md-3">
+                <img class="subject img-responsive" src="img/logic.svg">
                 </div>
                 <div class="col-md-4">
-                <h3><em>What's it doing?</em></h3>
-                <p>This Pizza Prototype takes the user's input from the Pizza Size, Quantity, and Toppings Selection. It produces a final price by adding the Size and Toppings selection values and multiplying that number by the Quantity input value.</p>
+                <h3><em>What is it?</em></h3>
+                <p>Everything that occurs before your Document Ready function is the Business logic which evaluates and manipulates data. Everything after the Document Ready function is the User Interface logic which employs the output of the Business Logic and sends it to specified areas of the index.html.</p>
                 </div>
                 <div class="col-md-5">
                 <h3><em>Code Preview</em></h3>
+                <pre>...Pizza.prototype.totalPriceCalc = function() {
+return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
+                }
+$(document).ready(function() {
 
-                <pre>Pizza.prototype.totalPriceCalc = function() {
-                return this.pizzaTotalPrice = (this.sizePriceCalc() + this.toppingsPriceCalc()) * this.pizzaQuantity;
-                }</pre>
+$("form#pizza-options").submit(function(event) {
+                    event.preventDefault();...</pre>
+                </div>
+              </div>
 
-              </div>
-              </div>
-              <div class = "item">
+              <div class = "item text-center">
+                <h2><em>Quiz Time!</em></h2>
                 <span id="showQuiz">
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#quizModal">Take The Quiz!</button>
+                <button type="button" class="btn center" data-toggle="modal" data-target="#quizModal">Take The Quiz!</button>
                 </span>
               </div>
+
 
 
           </div>
@@ -229,7 +254,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"><em>Test Your Knowledge!</em></h4>
+        <h1 class="modal-title" id="myModalLabel"><em>Test Your Knowledge!</em></h1>
       </div>
       <div class="modal-body">
         <!-- START QUESTIONS-->
@@ -256,6 +281,7 @@
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="submit" id = "nextQuestion" class="btn btn-default">Next Question</button>
         <button type="submit" class="btn btn-default">Submit Answer</button>
       </form>
       <div id="quizResults">
