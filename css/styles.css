@@ -153,6 +153,12 @@ button.btn.center {
   font-size: 2em;
   margin-left: 2%;
 }
-#result
+#outOfQuestions {
+  text-align: center;;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2em;
+}
 
 /*END   LOOK UNDER THE HOOD & QUIZ*/

@@ -10,7 +10,7 @@ function quizConstructor(question, answer1, answer2, answer3) {
 
     // Create quiz array
     var questionCounter = 0;
-    var quiz = new Array();
+    var quiz = Array();
 
     // All quiz questions and answers
     quiz[0] = new quizConstructor("Prototypes are which?: ","<input type='radio' name='answer' id='once' value=0> A model of your website","<input type='radio' name='answer' id='once' value=0>A property whose value is a function","<input type='radio' name='answer' id='once' value=1>Objects from which other objects inherit");
@@ -27,8 +27,10 @@ $(function() {
 
       if (userAnswer === 1) {
         $("#quizResults").text("Congatulations, you passed!");
-      } else  {
+      } else if (userAnswer === 0){
         $("#quizResults").text("Sorry, try again.");
+      } else  {
+        $("#quizResults").text("");
       }
 
       event.preventDefault();
@@ -36,8 +38,8 @@ $(function() {
 
 
 
-      $("#nextQuestion").click(function() {
-
+      $("button#nextQuestion").click(function() {
+// debugger;
         if (questionCounter < 6) {
         var question = quiz[questionCounter].question;
         var answer1 = quiz[questionCounter].answer1;
@@ -49,10 +51,17 @@ $(function() {
         $("#answer2").empty().append(answer2);
         $("#answer3").empty().append(answer3);
         $("#quizResults").empty();
+        // $("#quizModal").removeData("bs.modal");
         delete quiz[questionCounter];
         questionCounter += 1;
         } else {
-          $("#quizResults").text("Out of Questions!");
+          // alert("Out of Questions");
+          // $("#outOfQuestions").text("Out of Questions!");
+          $("#question").empty().append("<div id=#outOfQuestions>Out of Questions!</div>");
+          $("#answer1").empty();
+          $("#answer2").empty();
+          $("#answer3").empty();
+          $("#quizResults").empty();
         }
     });
 
@@ -65,7 +74,6 @@ $(function() {
         var answer1 = quiz[0].answer1;
         var answer2 = quiz[0].answer2;
         var answer3 = quiz[0].answer3;
-
         delete quiz[0];
         questionCounter += 1;
 
